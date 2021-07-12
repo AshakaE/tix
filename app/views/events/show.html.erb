@@ -11,8 +11,18 @@
 </p>
 
 <p>
-  <strong>Date:</strong>
-  <%= @event.date %>
+  <strong>Start:</strong>
+  <%= format(@event.event_start) %>
+</p>
+
+<ul>
+  <% eveperiod(@event.event_start, @event.event_end).each do |eve| %>
+    <li><%= eve %><input type="checkbox" name="status"></li>
+  <% end %>
+</ul>
+<p>
+  <strong>End:</strong>
+  <%= format(@event.event_end) %>
 </p>
 
 <p>

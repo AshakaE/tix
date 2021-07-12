@@ -7,7 +7,8 @@
     <tr>
       <th>Title</th>
       <th>Details</th>
-      <th>Date</th>
+      <th>Event start</th>
+      <th>Event end</th>
       <th>User</th>
       <th>Category</th>
       <th colspan="3"></th>
@@ -19,9 +20,9 @@
       <tr>
         <td><%= event.title %></td>
         <td><%= event.details %></td>
-        <td><%= event.date %></td>
+        <td><%= format(event.event_start) %></td>
+        <td><%= format(event.event_end) %></td>
         <td><%= event.user.username %></td>
-        
         <% if event.category == true %>
         <td>Paid</td>
         <% else %>
